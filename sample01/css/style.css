@@ -1,0 +1,58 @@
+/*css cascading style sheet カスケ―ディングスタイルシート*/
+/*外部参照 */
+p {
+    font-size: 14px;
+}
+h1 {
+    font-size: 24px;
+    margin: 0; /*余白 margin-top ,-right ,-bottom ,-leftを省略した書き方(ショートハンドプロパティ) 0はpxを省略できる*/
+}
+
+/*クラスの参照は.を先頭につける*/
+.content{
+    background-color: #fff;
+    width: 600px; /*エリアの幅*/
+    margin: 10 auto; /*topとbottomは10px rightとleftはautoで自動調整*/
+    border: 1px solid #d1d1d1; /*グループの囲い線*/
+    padding: 30px; /*padding borderの内側の余白*/
+}
+
+input {
+    border: none; /*none:ボーダーなし*/
+    border-bottom: 1px solid #d1d1d1; /*下線だけあり*/
+    font-size: 1.2em; /*em:倍*/
+    width:  100%; /*元の幅に対しての割合*/
+    padding: 8px;
+}
+
+button{
+    width: 100%;
+    background-color: #2096f3;
+    color: #fff;
+    padding: 15px;
+    border: 0;
+    border-radius: 3px; /*ボタンの角を丸くできる*/
+    box-shadow: 0 0 8px rgba(0, 0, 0, .4); /*ボタンの影の設定 X,Y,ぼかし具合,影の色(rgba) */
+}
+
+.required{
+    color: #f33;
+    font-size: .9em;
+    padding: 3px;
+    background-color: #fee;
+    font-weight: bold;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+.control{
+    margin-bottom: 3em;
+}
+
+/*labelは改行されない*/
+label{
+    display: block; /*改行する*/
+    margin-bottom: .5em;
+}

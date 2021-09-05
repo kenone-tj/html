@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!--htmlの決まり文句 どのバージョンか バージョン5以降はDOCTYPE-->
+<html> <!--htmlの決まり文句-->
+
+<head>
+    <meta charset="UTF-8"> <!--meta:html文書の性格を定義する charset:文字コード(SHIFT-JIS等) 右下と合わせる-->
+    <meta name="viewport" content="width=device-width"> <!--決まり文句　viewport:スマホなど画面の幅の設定 -->
+    <title>入会申し込み</title> <!--title:タブの名前 h1と同じにすることが多い-->
+    
+    <!--sanitize.css タグのデフォルトをリセットするためのCSS 先頭に書く-->
+    <link rel="stylesheet" href="css/sanitize.css"> <!--rel:リレーション stylesheetにリンクさせる href:.cssファイルの参照先ディレクトリ-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 内部参照 セレクター:pタグ全て
+    <style>
+    　　p {
+   　　     font-size: 14px;
+   　　 }    
+    </style>
+    -->
+
+</head>
+
+<body> <!--ここから表示内容を実装-->
+    <div class="content"> <!--div:division エリア(グループ)を管理 クラス属性を付加することが多い-->
+        <!--<h1 style="font-size: 24px;">入会申し込み</h1> インラインスタイルシート(h1タグのみに影響) style:グローバル属性 どのタグでも使える-->
+        <h1>入会申し込み</h1>　<!--h1をタグと呼ぶ　h:ヘディング h1,h2,…大見出し,中見出し,小見出し…　終了タグで改行される-->
+        <p>入会するには次のフォームに必要事項をご記入ください</p> <!--p:パラグラフ(段落) 終了タグで改行される-->
+        <div class="control">
+           <label for="mymail">メールアドレス<span class="required">必須</span></label> <!--タグの中にタグ：入れ子構造　label:forとidで紐づけできる-->
+           <input id="mymail" type="email" name="myamail"> <!--input(終了タグなし=空要素):ユーザーに入力を促すタグ type,name:属性(必須ではない) type="checkbox,button等" name:必須属性　タグの名前 -->
+        </div>
+        <div class="control">
+            <label for="password">パスワード<span class="required">必須</span></label>  <!--span:divと違い改行しない-->
+            <input id="password" type="password" name="password">
+        </div>
+        <div class="control">
+            <button type="submit">登録する</button> <!--ボタンができる type属性：button,menu,reset,submit-->
+        </div>
+    </div>
+</body>
+
+</html>
